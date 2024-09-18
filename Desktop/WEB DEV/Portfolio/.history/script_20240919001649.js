@@ -2,15 +2,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger-menu');
     const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', function(event) {
-        event.stopPropagation();
+    hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', function(event) {
-        if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+        const isClickInside = navLinks.contains(event.target) || hamburger.contains(event.target);
+        if (!isClickInside && navLinks.classList.contains('active')) {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
         }
