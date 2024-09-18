@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --header-bg: url('./IMAGES/IMG3.png') no-repeat center center/cover;
+    --footer-bg: #007bff;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+header.hero {
+    background: var(--header-bg);
+    color: #fff;
+    text-align: center;
+    padding: 15vh 20px; 
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 20px 0 0;
+}
+
+
+main.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: -10vh auto 0; 
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-light);
+    position: relative;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+
+footer {
+    background: var(--footer-bg);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    border-top: 2px solid var(--secondary-color);
+}
+
+footer p {
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: var(--secondary-color);
+}
+
+#back:link,
+#back:visited {
+
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    gap: 2px;
+}
+
+
